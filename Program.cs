@@ -2,7 +2,16 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        HaloGeneric halo = new HaloGeneric();
+        string namaPanggilan = "Zuhri";
+        halo.SapaUser(namaPanggilan);
     }
 }
 
+class HaloGeneric
+{
+    public void SapaUser<T>(T user)
+    {
+        Console.WriteLine($"Halo user {user}");
+    }
+}
